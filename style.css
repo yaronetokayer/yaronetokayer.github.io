@@ -1,0 +1,126 @@
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+header {
+    text-align: center;
+    padding: 20px;
+}
+h1 {
+    font-size: 36px;
+}
+.smaller-text {
+    font-size: 24px;
+    color: grey;
+}
+main {
+    flex-grow: 1;
+    text-align: left;
+    padding: 20px;
+    padding-bottom: 50px; /* Add padding to avoid overlap with footer */
+    padding-right: 80px; /* Add padding to avoid overlap with social buttons */
+    max-width: 800px; /* Set a maximum width */
+    margin: 0 auto; /* Center the content horizontally */
+}
+p {
+    font-size: 20px;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+ul {
+    text-align: left;
+    padding-left: 200px;
+    font-size: 20px;
+}
+footer {
+    background-color: #f5f5f5;
+    padding: 10px;
+    font-size: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    width: 98%;
+}
+footer p {
+    margin: 0;
+    font-size: 12px;
+}
+
+.social-links {
+    position: fixed;
+    bottom: 60px; /* Adjust to place above the footer */
+    right: 20px; /* Adjust distance from the right edge */
+    text-align: center;
+}
+
+.social-links p {
+    margin: 0;
+    font-size: 14px; /* Adjust font size for "Links:" */
+    font-weight: bold;
+    color: #333; /* Adjust text color */
+}
+
+.social-buttons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column; /* Stack buttons vertically */
+    gap: 10px;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    color: white;
+    border-radius: 10%; /* Make them circular */
+    font-size: 24px;
+    transition: background-color 0.3s ease;
+}
+
+.btn.youtube {
+    background-color: #FF0000; /* YouTube Red */
+}
+
+.btn.google-scholar {
+    background-color: #4285F4; /* Google Scholar Blue */
+}
+
+.btn.github {
+    background-color: #6e5494; /* GitHub Purple */
+}
+
+.btn.orcid {
+    background-color: #A6CE39; /* ORCID Green */
+}
+
+.btn:hover {
+    background-color: #939393;
+}
+
+/*
+.btn {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #45a049;
+}
+*/

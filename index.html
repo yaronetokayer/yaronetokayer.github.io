@@ -4,83 +4,57 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yarone Meir Tokayer</title>
-    <style>
-        body {
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh; /* Ensure the body takes up at least the viewport height */
-            margin: 0; /* Remove default margin */
-            font-family: Arial, sans-serif;
-        }
-        header {
-            text-align: center;
-            padding: 20px;
-        }
-        h1 {
-            font-size: 36px;
-        }
-        .smaller-text {
-            font-size: 24px;
-            color: grey; /* Make the text grey */
-        }
-        main {
-            flex-grow: 1; /* Allow the main content to grow and push the footer to the bottom */
-            text-align: center;
-            padding: 20px;
-        }
-        p {
-            font-size: 20px;
-        }
-        img {
-            max-width: 100%;
-            height: auto;
-        }
-        ul {
-            text-align: left;
-            padding-left: 200px;
-            font-size: 20px;
-        }
-        footer {
-            background-color: #f5f5f5;
-            padding: 10px;
-            font-size:12px; /* Smaller font size */
-            display: flex;
-            justify-content: space-between; /* Align items at opposite ends */
-            align-items: center;
-        }
-        footer p {
-            margin: 0;
-            font-size:12px;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"> <!-- Font Awesome for social media icons -->
+
 </head>
 <body>
     <header>
         <h1>Yarone Meir Tokayer <br> <!--<span class="smaller-text">(new website on its way!)</span>--></h1>
     </header>
     <main>
-        <img src="pics/cropped_face.jpeg" alt="headshot" width="300">
+        <div style="text-align: center;">
+            <img src="pics/cropped_face.jpeg" alt="headshot" width="300">
+        </div>
         <p>Welcome to my interim website. I am a doctoral candidate in the <a href="https://physics.yale.edu/" target="_blank">Department of Physics</a> at <a href="https://yale.edu/" target="_blank">Yale University</a> studying cosmology and galactic dynamics with advisor <a href="https://campuspress.yale.edu/vdbosch/" target="_blank">Frank van den Bosch</a>. I also work with <a href="https://campuspress.yale.edu/priya/" target="_blank">Priyamvada Natarajan</a> and <a href="https://www.michael-koss.com/research" target="_blank">Michael Koss</a></p>
         
         <p>My work uses physics computer simulations, data processing and visualization, and traditional analytical methods to better understand cosmology.</p>
 
-        <p>A new website with my research projects and interests is coming soon. Meanwhile:</p>
+        <p>A more detailed website with my research projects and interests is coming soon. Meanwhile:</p>
 
-        <ul>
+        <ul style="padding-left: 40px;"> <!-- Reduced padding for the list -->
             <li>Recent research projects include:
-                <ul style="padding-left: 20px;">
-                    <li>Probing the structure of dark matter structures by modeling their growth</li>
-                    <li>Reconciling gravitational lensing measurements with cosmological models</li>
-                    <li>Quantifying the bias in X-ray surveys of supermassive black holes</li>
-                </ul>
+            <ul style="padding-left: 40px;"> <!-- Reduced padding -->
+                <li>Probing the structure of dark matter structures by modeling their growth</li>
+                <li>Reconciling gravitational lensing measurements with cosmological models</li>
+                <li>Quantifying the bias in X-ray surveys of supermassive black holes</li>
+            </ul>
             <li>Here are links to my <a href="files/CV_updated.pdf" target="_blank">full academic CV</a> and <a href="files/resume_1p.pdf" target="_blank"> 1 page resume</a>. Publications can be found on my <a href="https://scholar.google.com/citations?user=AdgP1mcAAAAJ&hl=en" target="_blank">Google Scholar</a> profile.</li>
             <li>Check out our <a href="https://physics.yale.edu/academics/student-organizations/history-and-foundations-physics-reading-group-hofop" target="_blank">History and Foundations of Physics reading group</a>.</li>
             <li><a href="pics/einstein_patent.jpg" target="_blank">This</a> is my favorite picture of Albert Einstein.</li>
         </ul>
+
+        <div class="social-links">
+            <p>Links:</p>
+            <div class="social-buttons">
+                <a href="https://scholar.google.com/citations?user=AdgP1mcAAAAJ&hl=en" target="_blank" class="btn google-scholar" title="Google Scholar">
+                    <i class="fa-brands fa-google-scholar"></i>
+                </a>
+                <a href="https://github.com/YaroneTokayer" target="_blank" class="btn github" title="GitHub">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+                <a href="https://www.youtube.com/@yourchannel" target="_blank" class="btn youtube" title="YouTube">
+                    <i class="fa-brands fa-youtube"></i>
+                </a>
+                <a href="https://orcid.org/0000-0000-0000-0000" target="_blank" class="btn orcid" title="ORCID">
+                    <i class="fa-brands fa-orcid"></i>
+                </a>
+            </div>
+        </div>
     </main>
     <footer>
-        <p style="flex: 1; text-align: left;">Contact: yarone.tokayer[at]yale.edu</p>
-        <p class="copyright" style="text-align: right;">&copy; 2025 by Yarone Tokayer</p>
+        <p style="margin-right: auto;">Contact: yarone.tokayer[at]yale.edu</p>
+        <p class="copyright" style="margin-left: auto;">&copy; 2025 by Yarone Tokayer</p>
     </footer>
 
 </body>
