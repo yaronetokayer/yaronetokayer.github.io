@@ -21,6 +21,7 @@ main {
     flex-grow: 1;
     text-align: left;
     padding-top: 0px;
+    padding-left: 20px;
     padding-bottom: 50px; /* Add padding to avoid overlap with footer */
     padding-right: 80px; /* Add padding to avoid overlap with social buttons */
     max-width: 800px; /* Set a maximum width */
