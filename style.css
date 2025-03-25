@@ -55,6 +55,16 @@ footer p {
     font-size: 12px;
 }
 
+/* For the image/video in the header */
+.header-content {
+    display: flex;
+    height: 300px;
+    gap: 20px; /* Space between the image and video */
+    align-items: center; /* Align vertically */
+    justify-content: center; /* Center horizontally */
+    max-width: 100%; 
+}
+
 .social-links {
     position: fixed;
     bottom: 60px; /* Adjust to place above the footer */
@@ -107,21 +117,3 @@ footer p {
 .btn:hover {
     background-color: #939393;
 }
-
-/*
-.btn {
-    display: inline-block;
-    padding: 8px 16px;
-    background-color: #4CAF50;
-    color: white;
-    text-decoration: none;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    transition: background-color 0.3s ease;
-}
-
-.btn:hover {
-    background-color: #45a049;
-}
-*/
