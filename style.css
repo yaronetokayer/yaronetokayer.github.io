@@ -21,6 +21,7 @@ h1 {
 .smaller-text {
     font-size: 24px;
     color: grey;
+    margin-top: -20px; /* tighten spacing above */
 }
 
 /* Main content area */
