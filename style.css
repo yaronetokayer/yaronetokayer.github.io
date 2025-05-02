@@ -23,11 +23,26 @@ body {
 /* Scrollable main content area */
 main {
     margin-left: 300px;
-    padding: 40px 80px;
+    padding: 20px 30px;
     max-width: 800px;
     background-color: white;
     overflow-y: auto;
     flex-grow: 1;
+    box-sizing: border-box;   /* Ensures padding doesn't add to width */
+}
+
+.section-title {
+    font-size: 30px;
+    font-weight: bold;
+    color: #004080; /* darker blue to complement the left panel */
+    margin-top: 40px;
+    margin-bottom: 10px;
+}
+hr.section-divider {
+    border: none;
+    height: 2px;
+    background-color: #e6f2ff; /* same as left panel */
+    margin: 0 5px 30px 5px;
 }
 
 /* Header and subtitle styling */
