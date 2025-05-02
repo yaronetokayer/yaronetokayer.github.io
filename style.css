@@ -23,7 +23,7 @@ body {
 /* Scrollable main content area */
 main {
     margin-left: 300px;
-    padding: 20px 30px;
+    padding: 0px 30px 20px;
     max-width: 800px;
     background-color: white;
     overflow-y: auto;
@@ -136,4 +136,26 @@ footer {
 footer p {
     margin: 0;
     font-size: 12px !important;
+}
+
+.top-nav {
+    background-color: #f0f0f0;
+    border-top: 10px solid #ffffff;
+    border-bottom: 10px solid #ffffff;
+    display: flex;
+    justify-content: flex-start;
+    gap: 20px;
+    padding: 10px 30px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+.top-nav a {
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+    font-size: 18px;
+}
+.top-nav a:hover {
+    text-decoration: underline;
 }
