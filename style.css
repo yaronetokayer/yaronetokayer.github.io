@@ -1,4 +1,9 @@
-/* Global layout and font settings */
+:root {
+    --side-panel-width: 275px;
+    --nav-bar-height: 40px;
+    --main-max-width: 800px;
+}
+
 body {
     display: flex;
     margin: 0;
@@ -6,9 +11,13 @@ body {
     height: 100vh;
 }
 
+h1 {
+    font-family: Arial, sans-serif;
+}
+
 /* Fixed left profile panel */
 .profile-panel {
-    width: 300px;
+    width: var(--side-panel-width);
     background-color: #e6f2ff;
     display: flex;
     flex-direction: column;
@@ -20,15 +29,27 @@ body {
     height: 100vh;
 }
 
+.content-wrapper {
+    display: flex;
+    margin-left: var(--side-panel-width);
+    margin-top: var(--nav-bar-height);
+    height: calc(100vh - var(--nav-bar-height));
+    overflow: hidden;
+}
+
 /* Scrollable main content area */
 main {
-    margin-left: 300px;
     padding: 0px 30px 20px;
-    max-width: 800px;
+    max-width: var(--main-max-width);
+    flex: 0 1 var(--main-max-width); /* don't grow beyond max */
     background-color: white;
     overflow-y: auto;
-    flex-grow: 1;
     box-sizing: border-box;   /* Ensures padding doesn't add to width */
+}
+
+.right-filler {
+    flex-grow: 1;
+    background-color: #e6f2ff; /* same as sidebar */
 }
 
 .section-title {
@@ -140,16 +161,21 @@ footer p {
 
 .top-nav {
     background-color: #f0f0f0;
-    border-top: 10px solid #ffffff;
+    border-top: 0px solid #ffffff;
     border-bottom: 10px solid #ffffff;
     display: flex;
     justify-content: flex-start;
     gap: 20px;
     padding: 10px 30px;
-    position: sticky;
+    position: fixed;
     top: 0;
+    left: var(--side-panel-width); /* same as profile-panel width */
+    right: 0;
+    height: var(--nav-bar-height);
     z-index: 10;
+    align-items: center;
 }
+
 .top-nav a {
     text-decoration: none;
     font-weight: bold;
