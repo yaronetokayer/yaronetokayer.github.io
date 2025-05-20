@@ -1,6 +1,6 @@
 :root {
     --side-panel-width: 275px;
-    --nav-bar-height: 40px;
+    --nav-bar-height: 20px;
     --main-max-width: 800px;
 }
 
@@ -13,6 +13,7 @@ body {
 
 h1 {
     font-family: Arial, sans-serif;
+    color: #002147
 }
 
 /* Fixed left profile panel */
@@ -37,6 +38,13 @@ h1 {
     overflow: hidden;
 }
 
+.content-wrapper .subsection {
+    font-size: 18px;
+    color: grey;
+    font-style: italic;
+    text-transform: uppercase;
+}
+
 /* Scrollable main content area */
 main {
     padding: 0px 30px 20px;
@@ -50,6 +58,7 @@ main {
 .right-filler {
     flex-grow: 1;
     background-color: #e6f2ff; /* same as sidebar */
+    z-index: 20; /* Cover the navigation bar */
 }
 
 .section-title {
@@ -80,7 +89,7 @@ hr.section-divider {
 
 /* Paragraph and list text */
 p, ul {
-    font-size: 20px;
+    font-size: 18px;
 }
 
 ul {
@@ -162,10 +171,10 @@ footer p {
 .top-nav {
     background-color: #f0f0f0;
     border-top: 0px solid #ffffff;
-    border-bottom: 10px solid #ffffff;
-    display: flex;
-    justify-content: flex-start;
-    gap: 20px;
+    border-bottom: 0px solid #ffffff;
+    display: flex; /* Flexbox for horizontal layout */
+    justify-content: flex-start; /* Align items to the left */
+    gap: 20px; /* Space between links */
     padding: 10px 30px;
     position: fixed;
     top: 0;
@@ -173,15 +182,16 @@ footer p {
     right: 0;
     height: var(--nav-bar-height);
     z-index: 10;
-    align-items: center;
+    align-items: center; /* Center items vertically */
 }
 
 .top-nav a {
     text-decoration: none;
     font-weight: bold;
-    color: black;
+    color: #002147;
     font-size: 18px;
 }
 .top-nav a:hover {
     text-decoration: underline;
+    color: #ccd9e8;
 }

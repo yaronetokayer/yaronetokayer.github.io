@@ -1,4 +1,44 @@
 <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yarone Meir Tokayer</title>
+    <link rel="stylesheet" href="style.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <div id="sidebar-container"></div>
+
+    <div id="nav-container"></div>
+
+    <div class="content-wrapper">
+        <main>
+            <div class="section-title">About Me</div>
+            <hr class="section-divider">
+
+            <p>Welcome to my interim website. I am a doctoral candidate in the <a href="https://physics.yale.edu/" target="_blank">Department of Physics</a> at <a href="https://yale.edu/" target="_blank">Yale University</a> studying cosmology and galactic dynamics with advisor <a href="https://campuspress.yale.edu/vdbosch/" target="_blank">Frank van den Bosch</a>. I also work with <a href="https://campuspress.yale.edu/priya/" target="_blank">Priyamvada Natarajan</a> and <a href="https://www.michael-koss.com/research" target="_blank">Michael Koss</a>.</p>
+
+            <p>My work uses physics computer simulations, data processing and visualization, and traditional analytical methods to better understand our universe.</p>
+            <p>Here are links to my <a href="files/CV_updated.pdf" target="_blank">full academic CV</a> and <a href="files/resume_1p.pdf" target="_blank">1 page resume</a>. Publications can be found on my <a href="https://scholar.google.com/citations?user=AdgP1mcAAAAJ&hl=en" target="_blank">Google Scholar profile</a>.</p>
+        </main>
+    </div>
+
+    <div class="right-filler"></div>
+
+    <script>
+        fetch('sidebar.html')
+            .then(res => res.text())
+            .then(html => document.getElementById('sidebar-container').innerHTML = html);
+
+        fetch('header.html')
+            .then(res => res.text())
+            .then(html => document.getElementById('nav-container').innerHTML = html);
+    </script>
+</body>
+</html>
+
+<!-- <!DOCTYPE html>
 
 <html lang="en">
 
@@ -56,25 +96,33 @@
             <div class="section-title">About Me</div>
             <hr class="section-divider">
 
-            <p>Welcome to my interim website. I am a doctoral candidate in the <a href="https://physics.yale.edu/" target="_blank">Department of Physics</a> at <a href="https://yale.edu/" target="_blank">Yale University</a> studying cosmology and galactic dynamics with advisor <a href="https://campuspress.yale.edu/vdbosch/" target="_blank">Frank van den Bosch</a>. I also work with <a href="https://campuspress.yale.edu/priya/" target="_blank">Priyamvada Natarajan</a> and <a href="https://www.michael-koss.com/research" target="_blank">Michael Koss</a>.</p>
+                <p>Welcome to my interim website. I am a doctoral candidate in the <a href="https://physics.yale.edu/" target="_blank">Department of Physics</a> at <a href="https://yale.edu/" target="_blank">Yale University</a> studying cosmology and galactic dynamics with advisor <a href="https://campuspress.yale.edu/vdbosch/" target="_blank">Frank van den Bosch</a>. I also work with <a href="https://campuspress.yale.edu/priya/" target="_blank">Priyamvada Natarajan</a> and <a href="https://www.michael-koss.com/research" target="_blank">Michael Koss</a>.</p>
 
-            <p>My work uses physics computer simulations, data processing and visualization, and traditional analytical methods to better understand our universe.</p>
-            <p>Here are links to my <a href="files/CV_updated.pdf" target="_blank">full academic CV</a> and <a href="files/resume_1p.pdf" target="_blank">1 page resume</a>. Publications can be found on my <a href="https://scholar.google.com/citations?user=AdgP1mcAAAAJ&hl=en" target="_blank">Google Scholar profile</a>.</p>
+                <p>My work uses physics computer simulations, data processing and visualization, and traditional analytical methods to better understand our universe.</p>
+                <p>Here are links to my <a href="files/CV_updated.pdf" target="_blank">full academic CV</a> and <a href="files/resume_1p.pdf" target="_blank">1 page resume</a>. Publications can be found on my <a href="https://scholar.google.com/citations?user=AdgP1mcAAAAJ&hl=en" target="_blank">Google Scholar profile</a>.</p>
 
             <div class="section-title">What am I working on right now?</div>
             <hr class="section-divider">
 
-            <p>A more detailed website with my research projects and interests is coming soon. Meanwhile:</p>
+                <p>We have strong observational evidence to suggest that the main component of matter in the Universe, and the one most critical for structure formation, is "dark matter."  While its ontology is still unknown, many of its properties are well-constrained by studying its behavior through both cosmological computer simulations and astronomical observations.  For example, we know that it does not interact with light (hence "dark") and is relatively slow moving ("cold").  I try to better understand the dynamics of large collections of dark matter known as dark matter halos, which house galaxies and galaxy clusters.</p>
 
-            <ul>
-                <li>Recent research projects include:
-                    <ul>
-                        <li>Probing the structure of dark matter structures by modeling their growth</li>
-                        <li>Reconciling gravitational lensing measurements with cosmological models</li>
-                        <li>Quantifying the bias in X-ray surveys of supermassive black holes</li>
-                    </ul>
-                </li>
-            </ul>
+                <p class="subsection">Core Collapse of SIDM Halos</p>
+
+                <p>While dark matter is classically understood to be collisionless, recent models of self-interacting dark matter (SIDM) have gained traction as a way to resolve discrepancies between the standard cold dark matter (CDM) model and observations on galactic scales. A distinctive feature of SIDM halos is their ability to undergo a runaway process in which their centers become increasingly dense while shedding heat to the outskirts—a phenomenon known as core collapse. This process may lead to the formation of black holes, potentially providing a novel channel for the birth of black hole seeds in the early Universe.</p>
+
+                <p>I am currently studying the timescales of SIDM core-collapse under various conditions using an analytical framework that models SIDM as a heat-conducting fluid.</p>
+
+                <p>A more detailed website with my research projects and interests is coming soon. Meanwhile:</p>
+
+                <ul>
+                    <li>Recent research projects include:
+                        <ul>
+                            <li>Probing the structure of dark matter structures by modeling their growth</li>
+                            <li>Reconciling gravitational lensing measurements with cosmological models</li>
+                            <li>Quantifying the bias in X-ray surveys of supermassive black holes</li>
+                        </ul>
+                    </li>
+                </ul>
 
             <div class="section-title">Other Work</div>
             <hr class="section-divider">
@@ -87,4 +135,46 @@
 
 </body>
 
-</html>
+main {
+    padding: 0px 30px 20px;
+    max-width: var(--main-max-width);
+    /* width: var(--main-max-width);  */
+    flex: 1 1 var(--main-max-width);  /* Don't grow, don't shrink */
+    width: 100%; /* Allow it to take full width */
+    background-color: white;
+    overflow-y: auto;
+    box-sizing: border-box;   /* Ensures padding doesn't add to width */
+}
+
+main {
+    padding: 0px 30px 20px;
+    flex: 1;
+    max-width: var(--main-max-width);
+    min-width: 0;                /* Prevents overflow in flex */
+    background-color: white;
+    overflow-y: auto;
+    box-sizing: border-box;
+}
+
+.content-wrapper {
+    display: flex;
+    margin-left: var(--side-panel-width);
+    margin-top: var(--nav-bar-height);
+    height: calc(100vh - var(--nav-bar-height));
+    overflow: hidden;
+}
+
+main {
+    flex: 1;
+    max-width: var(--main-max-width);
+    min-width: 0;
+    width: 100%;
+    background-color: white;
+    overflow-y: auto;
+    box-sizing: border-box;
+    padding: 0px 30px 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+</html> -->

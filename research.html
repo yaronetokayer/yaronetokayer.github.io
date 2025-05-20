@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yarone Meir Tokayer</title>
+    <link rel="stylesheet" href="style.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <div id="sidebar-container"></div>
+
+    <div id="nav-container"></div>
+
+    <div class="content-wrapper">
+        <main>
+            <div class="section-title">What am I working on right now?</div>
+            <hr class="section-divider">
+
+                <p>We have strong observational evidence to suggest that the main component of matter in the Universe, and the one most critical for structure formation, is "dark matter."  While its ontology is still unknown, many of its properties are well-constrained by studying its behavior through both cosmological computer simulations and astronomical observations.  For example, we know that it does not interact with light (hence "dark") and is relatively slow moving ("cold").  I try to better understand the dynamics of large collections of dark matter known as dark matter halos, which house galaxies and galaxy clusters.</p>
+
+                <p class="subsection">Core Collapse of SIDM Halos</p>
+
+                <p>While dark matter is classically understood to be collisionless, recent models of self-interacting dark matter (SIDM) have gained traction as a way to resolve discrepancies between the standard cold dark matter (CDM) model and observations on galactic scales. A distinctive feature of SIDM halos is their ability to undergo a runaway process in which their centers become increasingly dense while shedding heat to the outskirts—a phenomenon known as core collapse. This process may lead to the formation of black holes, potentially providing a novel channel for the birth of black hole seeds in the early Universe.</p>
+
+                <p>I am currently studying the timescales of SIDM core-collapse under various conditions using an analytical framework that models SIDM as a heat-conducting fluid.</p>
+
+            <div class="section-title">Other Work</div>
+            <hr class="section-divider">
+
+            <p>A more detailed website with my research projects and interests is coming soon. Meanwhile:</p>
+
+                <ul>
+                    <li>Recent research projects include:
+                        <ul>
+                            <li>Probing the structure of dark matter structures by modeling their growth</li>
+                            <li>Reconciling gravitational lensing measurements with cosmological models</li>
+                            <li>Quantifying the bias in X-ray surveys of supermassive black holes</li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <p>Check out our <a href="https://physics.yale.edu/academics/student-organizations/history-and-foundations-physics-reading-group-hofop" target="_blank">History and Foundations of Physics reading group</a>.</p>
+                <p><a href="pics/einstein_patent.jpg" target="_blank">This</a> is my favorite picture of Albert Einstein.</p>
+        </main>
+    </div>
+
+    <div class="right-filler"></div>
+
+    <script>
+        fetch('sidebar.html')
+            .then(res => res.text())
+            .then(html => document.getElementById('sidebar-container').innerHTML = html);
+
+        fetch('header.html')
+            .then(res => res.text())
+            .then(html => document.getElementById('nav-container').innerHTML = html);
+    </script>
+</body>
+</html>

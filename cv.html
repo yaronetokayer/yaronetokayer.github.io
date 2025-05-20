@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yarone Meir Tokayer</title>
+    <link rel="stylesheet" href="style.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <div id="sidebar-container"></div>
+
+    <div id="nav-container"></div>
+
+    <div class="content-wrapper">
+        <main>
+            <div style="width: calc(100vw - var(--side-panel-width)); display: inline-block;"></div>
+            <div class="section-title">1 Page Resume</div>
+            <hr class="section-divider">
+
+            <iframe src="files/resume_1p.pdf" width="100%" height="500px" style="border: 1px solid #ccc;"></iframe>
+
+            <div class="section-title">Full Academic CV</div>
+            <hr class="section-divider">
+            <iframe src="files/CV_updated.pdf" width="100%" height="500px" style="border: 1px solid #ccc;"></iframe>
+        </main>
+    </div>
+
+    <div class="right-filler"></div>
+
+    <script>
+        fetch('sidebar.html')
+            .then(res => res.text())
+            .then(html => document.getElementById('sidebar-container').innerHTML = html);
+
+        fetch('header.html')
+            .then(res => res.text())
+            .then(html => document.getElementById('nav-container').innerHTML = html);
+    </script>
+</body>
+</html>
