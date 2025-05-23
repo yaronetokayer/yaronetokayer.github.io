@@ -1,107 +1,157 @@
-/* Global layout and font settings */
-body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    margin: 0;
-    font-family: Arial, sans-serif;
+:root {
+    --side-panel-width: 275px;
+    --nav-bar-height: 20px;
+    --main-max-width: 800px;
 }
 
-/* Header section */
-header {
-    text-align: center;
-    padding: 20px;
-    padding-right: 80px;
+body {
+    display: flex;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    height: 100vh;
+}
+
+/* Hyperlink styling */
+a {
+    color: #002147;
+    text-decoration: underline;
+}
+
+a:hover {
+    color: #003366;
+    text-decoration: underline;
+}
+
+a:active {
+    color: #002147;
+    text-decoration: underline;
+}
+
+a:visited {
+    color: #002147;
+    text-decoration: underline;
 }
 
 h1 {
+    font-family: Arial, sans-serif;
+    color: #002147
+}
+
+/* Fixed left profile panel */
+.profile-panel {
+    width: var(--side-panel-width);
+    background-color: #e6f2ff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    box-sizing: border-box;
+    position: fixed;
+    height: 100vh;
+}
+
+.content-wrapper {
+    display: flex;
+    margin-left: var(--side-panel-width);
+    margin-top: var(--nav-bar-height);
+    height: calc(100vh - var(--nav-bar-height));
+    overflow: hidden;
+}
+
+.content-wrapper .subsection {
+    font-size: 18px;
+    color: grey;
+    font-style: italic;
+    text-transform: uppercase;
+}
+
+/* Scrollable main content area */
+main {
+    padding: 0px 30px 20px;
+    max-width: var(--main-max-width);
+    flex: 0 1 var(--main-max-width); /* don't grow beyond max */
+    background-color: white;
+    overflow-y: auto;
+    box-sizing: border-box;   /* Ensures padding doesn't add to width */
+}
+
+.right-filler {
+    flex-grow: 1;
+    background-color: #e6f2ff; /* same as sidebar */
+    z-index: 20; /* Cover the navigation bar */
+}
+
+.section-title {
+    font-size: 30px;
+    font-weight: bold;
+    color: #004080; /* darker blue to complement the left panel */
+    margin-top: 40px;
+    margin-bottom: 10px;
+}
+hr.section-divider {
+    border: none;
+    height: 2px;
+    background-color: #e6f2ff; /* same as left panel */
+    margin: 0 5px 30px 5px;
+}
+
+/* Header and subtitle styling */
+.profile-panel h1 {
+    margin-bottom: 0;
     font-size: 36px;
 }
 
-.smaller-text {
-    font-size: 24px;
-    color: grey;
-    margin-top: -20px; /* tighten spacing above */
-}
-
-/* Main content area */
-main {
-    flex-grow: 1;
-    text-align: left;
-    padding: 0 80px 50px 20px;
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-/* Text styling */
-p, ul {
+.profile-panel .smaller-text {
+    margin-top: 0px;
     font-size: 20px;
+    color: grey;
 }
 
-/* Image responsiveness */
-img {
-    max-width: 100%;
-    height: auto;
+/* Paragraph and list text */
+p, ul {
+    font-size: 18px;
 }
 
-/* List padding */
 ul {
     text-align: left;
     padding-left: 40px;
 }
 
-/* Footer layout and style */
-footer {
-    background-color: #f5f5f5;
-    font-size: 12px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    padding: 10px 20px;   /* <-- adds vertical (10) & horizontal (20) space */
-    box-sizing: border-box;  /* ensures padding doesn’t exceed full width */
+/* Responsive images */
+img {
+    max-width: 100%;
+    height: auto;
 }
 
-footer p {
-    margin: 0;
-    font-size: 12px !important;
-}
-
-/* Social links fixed position and title styling */
-.social-links {
-    position: fixed;
-    bottom: 60px;
-    right: 20px;
-    text-align: center;
-}
-
-.social-links p {
-    margin: 0;
-    font-size: 14px;
-    font-weight: bold;
-    color: #333;
-}
-
-/* Social buttons container layout */
+/* Social buttons with labels */
 .social-buttons {
-    margin-top: 20px;
     display: flex;
     flex-direction: column;
+    align-items: flex-start;  /* Align content to the left */
     gap: 10px;
+    width: 100%;  /* Take full width of profile panel */
 }
 
-/* Base button styling */
-.btn {
+.social-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    padding-left: 5px;  /* Optional: small left padding for spacing */
+}
+
+.social-link .btn {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
+    font-size: 18px;
     color: white;
     border-radius: 10%;
-    font-size: 24px;
     transition: background-color 0.3s ease;
 }
 
@@ -125,4 +175,44 @@ footer p {
 /* Hover effect for all buttons */
 .btn:hover {
     background-color: #939393;
+}
+
+/* Footer confined to profile panel */
+footer {
+    font-size: 12px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+footer p {
+    margin: 0;
+    font-size: 12px !important;
+}
+
+.top-nav {
+    background-color: #f0f0f0;
+    border-top: 0px solid #ffffff;
+    border-bottom: 0px solid #ffffff;
+    display: flex; /* Flexbox for horizontal layout */
+    justify-content: flex-start; /* Align items to the left */
+    gap: 20px; /* Space between links */
+    padding: 10px 30px;
+    position: fixed;
+    top: 0;
+    left: var(--side-panel-width); /* same as profile-panel width */
+    right: 0;
+    height: var(--nav-bar-height);
+    z-index: 10;
+    align-items: center; /* Center items vertically */
+}
+
+.top-nav a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #002147;
+    font-size: 18px;
+}
+.top-nav a:hover {
+    text-decoration: underline;
+    color: #003366;
 }
