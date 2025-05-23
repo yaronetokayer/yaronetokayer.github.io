@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yarone Meir Tokayer</title>
+    <link rel="stylesheet" href="style.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <div id="sidebar-container"></div>
+
+    <div id="nav-container"></div>
+
+    <div class="content-wrapper">
+        <main>
+            <div class="section-title">Tutoring Services</div>
+            <hr class="section-divider">
+            <p>I have over 12 years of experience tutoring high school and college-level math and physics, working with more than 110 students across a wide range of levels and backgrounds.</p> <p>To learn more, please contact me at tokayertutoring[at]gmail.com.</p> <p>Testimonials are available upon request.</p>
+
+            <figure style="max-width: 400px; margin: 40px auto 30px auto; text-align: center;">
+                <img src="pics/physaward.jpg" style="width: 100%; border: 1px solid #ccc;">
+                <figcaption style="font-size: 14px; color: #555; margin-top: 8px;">
+                    Happy students
+                </figcaption>
+            </figure>
+        </main>
+    </div>
+
+    <div class="right-filler"></div>
+
+    <script>
+        fetch('sidebar.html')
+            .then(res => res.text())
+            .then(html => document.getElementById('sidebar-container').innerHTML = html);
+
+        fetch('header.html')
+            .then(res => res.text())
+            .then(html => document.getElementById('nav-container').innerHTML = html);
+    </script>
+</body>
+</html>

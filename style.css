@@ -11,6 +11,27 @@ body {
     height: 100vh;
 }
 
+/* Hyperlink styling */
+a {
+    color: #002147;
+    text-decoration: underline;
+}
+
+a:hover {
+    color: #003366;
+    text-decoration: underline;
+}
+
+a:active {
+    color: #002147;
+    text-decoration: underline;
+}
+
+a:visited {
+    color: #002147;
+    text-decoration: underline;
+}
+
 h1 {
     font-family: Arial, sans-serif;
     color: #002147
@@ -193,5 +214,5 @@ footer p {
 }
 .top-nav a:hover {
     text-decoration: underline;
-    color: #ccd9e8;
+    color: #003366;
 }

@@ -16,6 +16,15 @@
         <main>
             <div class="section-title">What am I working on right now?</div>
             <hr class="section-divider">
+                <figure style="display: flex; align-items: center; max-width: 400px; margin: 0 auto 30px auto;">
+                    <img src="pics/bullet.webp" alt="Bullet Cluster" style="width: 100%; max-width: 700px; border: 1px solid #ccc;">
+                    <figcaption style="font-size: 14px; color: #555; margin-left: 15px; max-width: 400px;">
+                        The Bullet Cluster: evidence for (relatively) collisionless dark matter from gravitational lensing.
+                        <span style="font-size: 11px;">
+                            (Credit: NASA/CXC/CfA/M. Markevitch; Optical and lensing map: NASA/STScI, Magellan/U. of Arizona/D. Clowe; Lensing map: ESO WFI)
+                        </span>
+                    </figcaption>
+                </figure>
 
                 <p>We have strong observational evidence to suggest that the main component of matter in the Universe, and the one most critical for structure formation, is "dark matter."  While its ontology is still unknown, many of its properties are well-constrained by studying its behavior through both cosmological computer simulations and astronomical observations.  For example, we know that it does not interact with light (hence "dark") and is relatively slow moving ("cold").  I try to better understand the dynamics of large collections of dark matter known as dark matter halos, which house galaxies and galaxy clusters.</p>
 
@@ -23,25 +32,62 @@
 
                 <p>While dark matter is classically understood to be collisionless, recent models of self-interacting dark matter (SIDM) have gained traction as a way to resolve discrepancies between the standard cold dark matter (CDM) model and observations on galactic scales. A distinctive feature of SIDM halos is their ability to undergo a runaway process in which their centers become increasingly dense while shedding heat to the outskirts—a phenomenon known as core collapse. This process may lead to the formation of black holes, potentially providing a novel channel for the birth of black hole seeds in the early Universe.</p>
 
-                <p>I am currently studying the timescales of SIDM core-collapse under various conditions using an analytical framework that models SIDM as a heat-conducting fluid.</p>
+                <p>I am currently studying the timescales of SIDM core-collapse under various conditions using an analytical framework that models SIDM as a heat-conducting fluid. An animation of one of these simulations is shown below.</p>
+                <figure style="max-width: 400px; margin: 0 auto 30px auto; text-align: center;">
+                    <video controls width="100%">
+                        <source src="mov/Model001_combined.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <figcaption style="font-size: 14px; color: #555; margin-top: 5px;">
+                        Simulated SIDM halo undergoing core collapse due to heat conduction.  The top-left panel shows the density profile of the halo.  Notice that over time a core forms followed by a steep increase in the inner density.
+                    </figcaption>
+                </figure>
+
+                <p class="subsection">Internal Structure of CDM Halos</p>
+
+                <p>A robust prediction of CDM is that dark matter halos follow a “universal” density profile&mdash;typically a double power law&mdash;characterized by a concentration, which measures the extent of the inner profile relative to the size of the halo. Much work has mapped these universal profiles to a ”two-phase accretion history,” where an inner core is established during early growth, while the concentration is set by later stages of slow growth. Despite this framework, key questions about how halos assemble and evolve remain open.</p>
+
+                <p>To address these questions, I use idealized N-body simulations to study the controlled growth of CDM halos. By comparing the simulated results with predictions from an analytical energy diffusion model&mdash;which captures the halo's dynamical response to sudden changes&mdash;I aim to clarify how structure emerges from growth history. This work is being done in close collaboration with <a href="https://syrte.github.io/" target="_blank">Zhaozhou Li</a>.</p>
+                <figure style="max-width: 400px; margin: 0 auto 30px auto; text-align: center;">
+                    <video controls width="100%">
+                        <source src="mov/0006_combined.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <figcaption style="font-size: 14px; color: #555; margin-top: 5px;">
+                        An example of an N-body simulation the response of a CDM halo to accreting a shell of mass.
+                    </figcaption>
+                </figure>
 
             <div class="section-title">Other Work</div>
             <hr class="section-divider">
 
-            <p>A more detailed website with my research projects and interests is coming soon. Meanwhile:</p>
+                <p class="subsection">CDM halos and GGSL</p>
 
-                <ul>
-                    <li>Recent research projects include:
-                        <ul>
-                            <li>Probing the structure of dark matter structures by modeling their growth</li>
-                            <li>Reconciling gravitational lensing measurements with cosmological models</li>
-                            <li>Quantifying the bias in X-ray surveys of supermassive black holes</li>
-                        </ul>
-                    </li>
-                </ul>
+                <p>In clusters of galaxies, the immense gravity can bend light from more distant galaxies behind them, a phenomenon known as strong lensing. Some of these lensing events are caused not by the whole cluster, but by individual dark matter subhalos&mdash;clumps of dark matter around individual galaxies. It has been found that the number of observed GGSL events is ten times higher than is predicted by the standard CDM paradigm.</p>
+                
+                <p>We asked: could this discrepancy be resolved by redistrbuting how mass is distributed inside the small dark matter clumps, while still remaining consistent with CDM? We tried concentrating the mass more tightly (a “cuspy” profile) or spreading it out (a “cored” profile), and we accounted for the effects of luminous matter (stars and gas) pulling dark matter inward. None of these changes were able to reproduce the high number of GGSL events seen in the real clusters, furthering the potential inconsistency in our models of how dark matter behaves on small scales.  This could be a sign that we need to consider alternative dark matter theories.</p>
+                
+                <p>This work was done in collaboration with <a href="https://physics.yale.edu/people/isaque-dutra" target="_blank">Isaque Dutra</a> and was supervised by <a href="https://campuspress.yale.edu/priya/" target="_blank">Priyamvada Natarajan</a>.  The results are presented in <a href="https://ui.adsabs.harvard.edu/abs/2024ApJ...970..143T/abstract" target="_blank">Tokayer et al. (2024)</a>.</p>
 
-                <p>Check out our <a href="https://physics.yale.edu/academics/student-organizations/history-and-foundations-physics-reading-group-hofop" target="_blank">History and Foundations of Physics reading group</a>.</p>
-                <p><a href="pics/einstein_patent.jpg" target="_blank">This</a> is my favorite picture of Albert Einstein.</p>
+                <p class="subsection">Obscuration Bias in X-ray AGN surveys</p>
+
+                <p>Active galactic nuclei (AGN)&mdash;actively accreting supermassive black holes at the centers of galaxies&mdash;are known for their bright X-ray emission, but obscuring clouds of gas and dust can block this radiation, resulting in "obscured AGN."  Obscured AGN can be nearly invisible to X-ray telescopes like Chandra.  This study tried to understand how many AGN go undetected missing due to obscuration and how accurately we characterizing the ones we do detect.</p>
+                
+                <p></p>We used realistic models of nearby AGN from the BAT AGN Spectroscopic Survey (BASS), which includes over 1,000 AGN whose X-ray spectra are minimally affected by obscuration. We simulated how these AGN would appear if they were located at high redshift and observed with the Chandra telescope. We found that Chandra failed to detect the majority of obscured AGN in our simulations. When a detection was made, spectral fits were prone to overestimating the obscuration, potentially exaggerating the effect of AGN being more heavily obscured at higher redshift. This bias has implications for how we understand the growth of black holes over cosmic time.</p>
+
+                <p>This work was done under the supervision of <a href="https://www.michael-koss.com/research" target="_blank">Michael Koss</a> and <a href="https://urrylab.yale.edu/" target="_blank">Meg Urry</a>, and the results are presented in <a href="https://ui.adsabs.harvard.edu/abs/2025ApJ...982..134T/abstract" target="_blank">Tokayer et al. (2025)</a>.</p>
+
+                <p class="subsection">HESS J0632+057 Light Curve</p>
+
+                <p>HESS J0632+057 is one of only 6 known galactic gamma ray binaries. Each of these systems consists of a main sequence O or B star and a compact object.  While HESS J0632+057 has been studied extensively in X-rays, much remains to be uncovered about the source. It exhibits a unique double-peaked high energy light curve, which (until this study) had not been quantitatively explained, even while qualitative models had been proposed. A unique orbital solution has also not been found. This work uses the entire archive of Swift-XRT data dating back to 2009, as well as observations by NuSTAR (hard X-rays), VERITAS (gamma rays), and MDM (optical), to probe a novel explanation of the double-peaked light curve, and a corresponding orbital solution.</p>
+
+                <p>Our light curve model accounts for 3 features of the system: (1) <b>B-field modulation:</b> As the pulsar gets closer and farther from the Be star, the B field at the intra-binary shock modulates, due to changing distance from the pulsar. A higher B-field results in more X-ray emission. (2) <b>Beaming:</b> Particles accelerate along the intra-binary shock, which wraps around the pulsar, creating a beaming effect when the pulsar passes the line of sight from Earth.  (3) <b>Disk passage:</b> When the pulsar passes through the circumstellar disk, there is increased flux. This part of the model is phenomenological, and may be due to an increase in the particle density or an increase in the B-field.</p>
+
+                <p>This work was done at <a href="https://www.astro.columbia.edu/content/astrophysics-lab" target="_blank">Columbia Astrophysics Laboratory</a>  under the supervision of <a href="https://www.physics.columbia.edu/content/charles-j-hailey" target="_blank">Chuck Hailey</a> and <a href="https://www.physics.columbia.edu/content/kaya-mori" target="_blank">Kaya Mori</a>. The results are presented in <a href="https://ui.adsabs.harvard.edu/abs/2021ApJ...923...17T/abstract" target="_blank">Tokayer et al. (2021)</a>.</p>
+
+            <div class="section-title">Outside of Research</div>
+            <hr class="section-divider">
+                <p>I am a founder and organizer of the <a href="https://physics.yale.edu/academics/student-organizations/history-and-foundations-physics-reading-group-hofop" target="_blank">History and Foundations of Physics reading group</a> at Yale University.  The reading group is a forum that brings together faculty, postdocs, graduate students, and undergraduates from both sciences and humanities approximately once a month to discuss contemporary ideas in the history, philosophy, and sociology of physics, as well as foundational texts.</p>
         </main>
     </div>
 
