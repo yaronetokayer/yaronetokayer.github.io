@@ -216,3 +216,146 @@ footer p {
     text-decoration: underline;
     color: #003366;
 }
+
+/* HAMBURGER MENU BUTTON */
+#menu-toggle {
+    display: none; /* hidden by default (desktop) */
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 999;
+    background-color: transparent;
+    border: none;
+    font-size: 24px;
+    color: #002147;
+    cursor: pointer;
+}
+
+/* Show only on mobile */
+@media (max-width: 768px) {
+    #menu-toggle {
+        display: block;
+    }
+}
+
+/* ======== MOBILE SIDEBAR VISIBILITY ======== */
+#mobile-sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: var(--side-panel-width);
+    height: 100vh;
+    background-color: #e6f2ff;
+    overflow-y: auto;
+    z-index: 998;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+}
+
+/* When visible, slide into view */
+#mobile-sidebar.visible {
+    transform: translateX(0%);
+}
+
+/* Only apply this behavior on small screens */
+@media (min-width: 769px) {
+    #mobile-sidebar {
+        display: none;
+    }
+}
+
+/* ======== DESKTOP SIDEBAR ======== */
+#desktop-sidebar {
+    display: none; /* hidden on small screens */
+}
+
+/* Show on screens 769px and wider */
+@media (min-width: 769px) {
+    #desktop-sidebar {
+        display: block;
+    }
+
+    /* Sidebar styles apply to the contents inside */
+    #desktop-sidebar .profile-panel {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: var(--side-panel-width);
+        height: 100vh;
+    }
+}
+
+/* ======== MOBILE NAVIGATION INSIDE SIDEBAR ======== */
+.sidebar-nav {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    margin: 20px 0;
+    width: 100%;
+}
+
+.sidebar-nav a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #002147;
+    font-size: 18px;
+    padding: 8px 10px;
+}
+
+.sidebar-nav a:hover {
+    background-color: #dceeff;
+    border-radius: 5px;
+}
+
+/* Show only on small screens */
+@media (max-width: 768px) {
+    .sidebar-nav {
+        display: flex;
+    }
+
+    .top-nav {
+        display: none;
+    }
+
+    .content-wrapper {
+        margin-left: 0;         /* Don’t leave space for sidebar */
+        margin-top: 0;          /* Don’t leave space for top nav */
+        height: auto;
+    }
+
+    .right-filler {
+        display: none;
+    }
+}
+
+/* In CV page, spacer to account for fixed sidebar on desktop only */
+.desktop-spacer {
+    width: calc(100vw - var(--side-panel-width));
+    display: inline-block;
+}
+
+@media (max-width: 768px) {
+    .desktop-spacer {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    main {
+        width: 100% !important;
+        max-width: 100% !important;
+        flex: 1 1 100% !important;
+    }
+
+    .content-wrapper {
+        width: 100%;
+        flex-direction: column;
+        overflow-x: hidden;
+    }
+
+    iframe {
+        width: 100%;
+        max-width: 100%;
+        display: block;
+    }
+}

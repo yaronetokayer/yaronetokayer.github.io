@@ -17,7 +17,18 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
-    <div id="sidebar-container"></div>
+    <button id="menu-toggle" aria-label="Toggle menu">
+        <i class="fas fa-bars"></i>
+    </button>
+    <!-- Sidebar for mobile -->
+    <div id="mobile-sidebar">
+        <div id="sidebar-container-mobile"></div>
+    </div>
+
+    <!-- Sidebar for desktop -->
+    <div id="desktop-sidebar">
+        <div id="sidebar-container-desktop"></div>
+    </div>
 
     <div id="nav-container"></div>
 
@@ -111,13 +122,24 @@
     <div class="right-filler"></div>
 
     <script>
+        // Load sidebar into both mobile and desktop versions
         fetch('sidebar.html')
             .then(res => res.text())
-            .then(html => document.getElementById('sidebar-container').innerHTML = html);
+            .then(html => {
+                document.getElementById('sidebar-container-mobile').innerHTML = html;
+                document.getElementById('sidebar-container-desktop').innerHTML = html;
+            });
 
         fetch('header.html')
             .then(res => res.text())
             .then(html => document.getElementById('nav-container').innerHTML = html);
+
+        // Toggle sidebar visibility on small screens
+        document.getElementById('menu-toggle').addEventListener('click', () => {
+            const sidebar = document.getElementById('mobile-sidebar');
+            sidebar.classList.toggle('visible');
+        });
     </script>
+
 </body>
 </html>
