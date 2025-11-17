@@ -91,6 +91,13 @@
             const sidebar = document.getElementById('mobile-sidebar');
             sidebar.classList.toggle('visible');
         });
+
+        // Close sidebar when any nav link is clicked
+        document.addEventListener('click', (e) => {
+            if (e.target.closest('#mobile-sidebar a')) {
+                document.getElementById('mobile-sidebar').classList.remove('visible');
+            }
+        });
     </script>
 </body>
 </html>
