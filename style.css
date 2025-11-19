@@ -160,6 +160,10 @@ img {
     background-color: #FF0000;
 }
 
+.btn.linkedin {
+    background-color: #0077B5;
+}
+
 .btn.google-scholar {
     background-color: #4285F4;
 }
