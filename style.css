@@ -364,7 +364,7 @@ footer p {
     }
 }
 
-/* Introduction photographs: recent talk above the two existing photos. */
+/* Introduction photographs: paired talks, then the existing photo pair. */
 .intro-gallery {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -374,16 +374,18 @@ footer p {
     align-items: start;
 }
 .intro-gallery figure { margin: 0; text-align: center; }
-.intro-gallery-featured { grid-column: 1 / -1; }
-.intro-gallery-portrait { grid-column: 1 / -1; width: 100%; max-width: 340px; justify-self: center; }
+
 .intro-gallery img { display: block; width: 100%; border: 1px solid #ccc; }
-.intro-gallery-featured img {
-    aspect-ratio: 16 / 9;
+.intro-gallery-featured img,
+.intro-gallery-portrait img {
+    aspect-ratio: 3 / 4;
     height: auto;
     object-fit: cover;
-    object-position: center 30%;
 }
+/* Frame the speaker and podium, leaving less of the projection and curtains. */
+.intro-gallery-featured img { object-position: 48% center; }
+.intro-gallery-portrait img { object-position: center 30%; }
 .intro-gallery figcaption { margin-top: 8px; font-size: 14px; line-height: 1.5; color: #555; }
-@media (max-width: 520px) {
-    .intro-gallery { grid-template-columns: 1fr; gap: 24px; }
+@media (max-width: 900px) {
+    .intro-gallery { grid-template-columns: 1fr; max-width: 420px; gap: 24px; }
 }
