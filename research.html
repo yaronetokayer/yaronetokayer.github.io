@@ -36,8 +36,8 @@
         <main>
             <div style="margin-top: 40px;"></div>
             <div style="text-align: center; font-weight: bold;">
-                <p>My research focuses on understanding the dynamics of dark matter halos and using them to constrain the properties of this elusive yet ubiquitous form of matter.</p>
-                <p>Currently, I am building analytic and N-body computational models to study dark matter halo evolution, SIDM core collapse, and mass segregation in stellar systems.</p>
+                <p>My research focuses on understanding the dynamics of certain types of gravitational systems called <em>collisional systems</em>. These include certain types of dark matter systems and star clusters.</p>
+                <p>Currently, I use analytic and N-body computational models to study dark matter halo evolution, SIDM core collapse, and mass segregation in stellar systems.</p>
             </div>
 
             <div class="section-title">What am I working on right now?</div>
@@ -54,11 +54,15 @@
 
                 <p>We have strong observational evidence to suggest that the main component of matter in the Universe, and the one most critical for structure formation, is <b>dark matter</b>.  While its ontology is still unknown, many of its properties are well-constrained by studying its behavior through both cosmological computer simulations and astronomical observations.  For example, we know that it does not interact with light (hence "dark") and is relatively slow moving ("cold").  I try to better understand the dynamics of large collections of dark matter known as dark matter halos, which house galaxies and galaxy clusters.</p>
 
-                <p class="subsection">Core Collapse of SIDM Halos</p>
+                <p class="subsection">Core Collapse of SIDM Halos (<a href="https://arxiv.org/abs/2610.28890" target="_blank" rel="noopener noreferrer">van den Bosch &amp; Tokayer (2026)</a>)</p>
 
-                <p>While dark matter is classically understood to be collisionless, recent models of self-interacting dark matter (SIDM) have gained traction as a way to resolve discrepancies between the standard cold dark matter (CDM) model and observations on galactic scales. A distinctive feature of SIDM halos is their ability to undergo a runaway process in which their centers become increasingly dense while shedding heat to the outskirts—a phenomenon known as <b>core collapse</b>. This process may lead to the formation of black holes, potentially providing a novel channel for the birth of black hole seeds in the early Universe.</p>
+                <p>In the standard picture, dark matter particles pass through one another almost without interacting. In <b>self-interacting dark matter (SIDM)</b> models, they can scatter off one another and exchange energy. This can eventually cause a halo's center to lose heat to its surroundings, shrink, and become hotter and denser. This process is called <b>core collapse</b>.</p>
 
-                <p>I am currently studying the timescales of SIDM core-collapse under various conditions using an analytical framework that models SIDM as a heat-conducting <em>fluid</em>. I have built a complete Python module (<a href="https://github.com/yaronetokayer/pygtfcode" target="_blank"><tt>pygtfcode</tt></a>) to easily and efficiently run these simulations. An animation of one is shown below.</p>
+                <p>I am currently studying the timescales of SIDM core-collapse under various conditions using an analytical framework that models SIDM as a heat-conducting <em>fluid</em>. I have built a complete Python module (<a href="https://github.com/yaronetokayer/pygtfcode" target="_blank" rel="noopener noreferrer"><tt>pygtfcode</tt></a>) to easily and efficiently run these simulations. An animation of one is shown below.</p>
+
+                <p>In van den Bosch &amp; Tokayer (2026), we compared fluid calculations with particle simulations and improved the model's description of heat flow. We found that the late stages of collapse slow down substantially. This makes it harder for SIDM collapse alone to explain the massive black holes seen in the early Universe.</p>
+
+                <p>In a follow-up paper in preparation, we further explore SIDM evolution with our gravothermal fluid calculations, including what happens deep into core collapse. You can explore how halo properties and interaction strengths affect this evolution with the <a href="https://projects.frankvdbosch.com/SIDM_core_collapse/" target="_blank" rel="noopener noreferrer">SIDM core-collapse emulator</a>.</p>
                 <figure style="max-width: 400px; margin: 0 auto 30px auto; text-align: center;">
                     <video controls width="100%">
                         <source src="mov/Model001_combined.mp4" type="video/mp4">
@@ -69,7 +73,22 @@
                     </figcaption>
                 </figure>
 
-                <p>It turns out this same gravothermal fluid model can be used to simulate mass segregation in certain astrophysical systems, whereby more massive species of matter sink toward the center while the lighter species diffuse outward.  See <a href="https://journals.aps.org/prd/abstract/10.1103/z1fy-2p8s" target="_blank">Zhong and Shapiro (2025)</a>.  I have extended <tt>pygtfcode</tt> to simulate these multi-component systems in <a href="https://github.com/yaronetokayer/pygtf2" target="_blank"><tt>pygtf2</tt></a>, in which we model both the evolution of the entire halo, as well as that of the individual species.</p>
+                <p class="subsection">Multi-Component Star Clusters (Tokayer, van den Bosch, and Errani (in prep.))</p>
+
+                <p>It turns out this same gravothermal fluid model can be used to simulate mass segregation in certain astrophysical systems, whereby more massive species of matter sink toward the center while the lighter species diffuse outward. I have extended <tt>pygtfcode</tt> to simulate these multi-component systems in <a href="https://github.com/yaronetokayer/multigtf" target="_blank" rel="noopener noreferrer"><b>MultiGTF</b></a>, in which we model both the evolution of the entire halo, as well as that of the individual species.</p>
+
+                <p>Beyond mass segregation, MultiGTF follows the long-term, or secular, evolution of star clusters as their stars exchange energy through gravitational encounters. We can study how the cluster contracts, expands, or undergoes core collapse, while following the different stellar populations within it.</p>
+
+                <p>My paper describing MultiGTF and its applications has been submitted to <em>The Astrophysical Journal</em>. Alongside star clusters, we also study how stars redistribute themselves when they are embedded in a surrounding dark matter halo. <a href="https://rerrani.github.io/" target="_blank" rel="noopener noreferrer">Raphaël Errani</a>, at Tel Aviv University, contributed to this work.</p>
+
+                <p class="subsection">Gravitational Lensing by Collapsing SIDM Halos (<a href="https://arxiv.org/abs/2611.09546" target="_blank" rel="noopener noreferrer">van den Bosch &amp; Tokayer (2026)</a>)</p>
+
+                <p>Gravity bends light, so a dark matter halo can act as a lens that magnifies and distorts galaxies behind it. It might seem that a halo should become an ever stronger lens as its center grows denser during core collapse. But density alone does not tell the whole story.</p>
+
+                <p>We follow how lensing changes as SIDM halos evolve. We find that lensing can strengthen during early collapse, then weaken again even as the central density continues to rise: the dense inner core is shrinking and losing mass. This means that the full distribution of matter, and the stage of collapse, matter when using gravitational lenses to test SIDM. The paper is available on arXiv and has been submitted to <em>Monthly Notices of the Royal Astronomical Society</em>.</p>
+
+            <div class="section-title">Other Work</div>
+            <hr class="section-divider">
 
                 <p class="subsection">Internal Structure of CDM Halos</p>
 
@@ -82,12 +101,9 @@
                         Your browser does not support the video tag.
                     </video>
                     <figcaption style="font-size: 14px; color: #555; margin-top: 5px;">
-                        An example of an N-body simulation the response of a CDM halo to accreting a shell of mass.
+                        An example of an N-body simulation showing the response of a CDM halo to accreting a shell of mass.
                     </figcaption>
                 </figure>
-
-            <div class="section-title">Other Work</div>
-            <hr class="section-divider">
 
                 <p class="subsection">CDM halos and GGSL (<a href="https://ui.adsabs.harvard.edu/abs/2024ApJ...970..143T/abstract" target="_blank">Tokayer et al. (2024)</a>)</p>
 
